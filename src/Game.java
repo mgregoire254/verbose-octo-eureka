@@ -1,3 +1,4 @@
+//Basic text adventure. By Michael Gregoire.  Name forthcoming.
 import java.util.Scanner;
 
 public class Game {
