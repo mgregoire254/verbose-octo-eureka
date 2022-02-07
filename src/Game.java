@@ -16,7 +16,7 @@ public class Game {
 		game = new Game();
 		
 		game.playerSetUp();
-		game.townGate();
+		game.arrowstartownGate();
 
 	}
 
@@ -36,7 +36,7 @@ public class Game {
 		
 	}
 	
-	public void townGate() {
+	public void arrowstartownGate() {
 		
 		System.out.println("");
 		System.out.println("----------------------------------------------------------------------");
@@ -54,24 +54,24 @@ public class Game {
 		if(choice == 1) {
 			System.out.println("Guard: Hello there stranger. So your name is " + playerName + "? \nSorry but we cannot let a stranger enter our town.");
 			enterScanner.nextLine();
-			townGate();
+			arrowstartownGate();
 		}
 		if(choice == 2) {
 			playerHP= playerHP - 1;
 			System.out.println("Guard: Hey dont't be stupd. \n\nThe guard hit you so hard and you gave up.\n(You recieve 1 damage)");
 			System.out.println("Your HP: " + playerHP);
 			enterScanner.hasNextLine();
-			townGate();
+			arrowstartownGate();
 		}
 		if(choice == 3) {
-			crossRoad();
+			towncrossRoad();
 		}
 		else {
-			townGate();
+			arrowstartownGate();
 		}
 	}
 	
-	public void crossRoad() {
+	public void towncrossRoad() {
 		System.out.println("----------------------------------------------------------------------\n");
 		System.out.println("You are at a crossroad. If you go south, you will go back to the town.\n\n");
 		System.out.println("1: Go north");
@@ -83,23 +83,23 @@ public class Game {
 		choice = myScanner.nextInt();
 		
 		if(choice == 1) {
-			north();
+			river();
 		}
 		if(choice == 2) {
-			east();
+			forest();
 		}
 		if(choice == 3) {
-			townGate();
+			arrowstartownGate();
 		}
 		if(choice == 4) {
 			west();
 		}
 		else {
-			crossRoad();
+			towncrossRoad();
 		}
 	}
 	
-	public void north() {
+	public void river() {
 		System.out.println("----------------------------------------------------------------------\n");
 		System.out.println("There is a river. You drink the water and rest at the riverside.");
 		System.out.println("Your HP is recovered.");
@@ -111,14 +111,14 @@ public class Game {
 		choice = myScanner.nextInt();
 		
 		if(choice == 1) {
-			crossRoad();
+			towncrossRoad();
 		}
 		else {
-			north();
+			river();
 		}
 	}
 	
-	public void east() {
+	public void forest() {
 		System.out.println("----------------------------------------------------------------------\n");
 		System.out.println("You walked into a dark forest and found a Long Sword!");
 		playerWeapon = "Long Sword";
@@ -129,15 +129,19 @@ public class Game {
 		choice = myScanner.nextInt();
 		
 		if(choice == 1) {
-			crossRoad();
+			towncrossRoad();
 		}
 		else {
-			north();
+			river();
 		}
 		
 	}
 	
 	public void west() {
 		
+	}
+
+	public void arrowstarMarket(){
+
 	}
 }
