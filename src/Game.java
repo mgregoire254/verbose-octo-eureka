@@ -24,18 +24,13 @@ public class Game {
 		
 		
 		playerHP = 15;
-		
-		
 		playerWeapon = "Knife";
 		
 		System.out.println("Your HP: " + playerHP);
 		System.out.println("Your Weapon: " + playerWeapon);
 		
-		
 		System.out.println("Please enter your name: ");
-		
 		playerName = myScanner.nextLine();
-		
 		System.out.println("Hello " + playerName + ", let's start your adventure!");
 		
 		
