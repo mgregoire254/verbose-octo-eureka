@@ -137,7 +137,7 @@ public class Game {
 		
 	}
 	
-	public void west() {
+	public void openRoad() {
 		
 	}
 
